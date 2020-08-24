@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html>
 <style>
-#container {
-  width: 1200px;
-  height: 700px;
-  position: relative;
-  background: yellow;
+#sea {
+  width: 1300px;
+  height: 300px;
+  position: absolute;
+  background-image: url(images/sea2.jpg);
+  background-size: cover;
+  
 }
+body{
+  
+}
+
 #animate {
   width: 100px;
   height: 100px;
   position: absolute;
-  background-color: red;
+  background-image: url(images/city.png);
+  background-image: url(images/ship2.png);
 }
+#sky {
+  width: 1300px;
+  height: 250px;
+  position: relative;
+  background-image: url(images/sky123.png);
+  background-size: cover;}
 </style>
 <body>
 
-<p><button onclick="myMove()">Click Me</button></p> 
+<p><button onclick="myMove()">Click Me</button></p>
+<div id="sky"></div>
 
-<div id ="container">
-  <div id ="animate"></div>
-</div>
+<div id ="sea"></div>
+<div id ="animate"></div>
 
-<script>
+ <script>
 function myMove() {
   var elem = document.getElementById("animate");   
   var pos = 0;
   var id = setInterval(frame, 10);
   function frame() {
-    if (pos == 750) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + "px"; 
+    if(pos==1200)
+    {
+      
+    }
+   {
+      pos++;   
+     /* elem.style.transform="rotate(-20deg)"; */    
       elem.style.left = pos + "px"; 
+      elem.style.transform="rotate(20deg)";
+      elem.style.transform="transform("+px+")";
+      
     }
   }
 }
