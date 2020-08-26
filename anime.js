@@ -8,14 +8,12 @@ function myMove() {
   var pos = 0;
   var pis= 1200;
   var fs=1200;
- var ft=1000;
-  var up=380;
-  var id = setInterval(frame, 12);
+  var ft=1000;
+  var id = setInterval(frame, 18);
   function frame() {
     if(pos==1300 )
     {
 pos=0;
-pis=1200;
 fs=1000;
 ft=900;
     }
@@ -72,81 +70,81 @@ function air() {
 
 }
 function octopus() {
-    let octopusPositionY = 0;
-    let Rotate = 0;
-    let flag = 1;
-    let elem6 = document.getElementById("fish2");
-    let fxnId = setInterval(octo, 25);
+    var octopusPositionY = 0;
+    var Rotate = 0;
+    var pin = 1;
+    var elem6 = document.getElementById("fish2");
+    var Id = setInterval(octo, 25);
     function octo() {
-      if (flag == 1) {
+      if (pin == 1) {
         octopusPositionY++;
         Rotate -= 0.4;
         elem6.style.transform = "translateY(" + octopusPositionY + "px) rotate(" + Rotate + "deg)";
         if (octopusPositionY == 100) {
-          flag = 2;
+          pin = 2;
         }
       }
-      if (flag == 2 || flag == -2) {
-        if (flag == 2) {
+      if (pin == 2 || pin == -2) {
+        if (pin == 2) {
           octopusPositionY--;
           elem6.style.transform = "translateY(" + octopusPositionY + "px)";
           if (octopusPositionY == 0) {
-            flag = -1;
+            pin = -1;
           }
         }
-        if (flag == -2) {
+        if (pin == -2) {
           octopusPositionY++;
           elem6.style.transform = "translateY(" + octopusPositionY + "px)";
           if (octopusPositionY == 0) {
-            flag = 1;
+            pin = 1;
           }
         }
       }
-      if (flag == -1) {
+      if (pin == -1) {
         octopusPositionY--;
         elem6.style.transform = "translateY(" + octopusPositionY + "px)";
         if (octopusPositionY == -100) {
-          flag = -2;
+          pin = -2;
         }
       }
     }
   }
   function fishes() {
-    let octopusPositionY = 0;
-    let Rotate = 0;
-    let flag = 1;
-    let elem7 = document.getElementById("fish");
-    let fxnId = setInterval(fish, 50);
+    var octopusPositionY = 0;
+    var Rotate = 0;
+    var pin = 1;
+    var elem7 = document.getElementById("fish");
+    var Id = setInterval(fish, 50);
     function fish() {
-      if (flag == 1) {
+      if (pin == 1) {
         octopusPositionY++;
         Rotate -= 0.4;
         elem7.style.transform = "translateY(" + octopusPositionY + "px) rotate(" + Rotate + "deg)";
         if (octopusPositionY == 100) {
-          flag = 2;
+          pin = 2;
         }
       }
-      if (flag == 2 || flag == -2) {
-        if (flag == 2) {
+      if (pin == 2 || pin == -2) {
+        if (pin == 2) {
           octopusPositionY--;
           elem7.style.transform = "translateY(" + octopusPositionY + "px)";
           if (octopusPositionY == 0) {
-            flag = -1;
+            pin = -1;
           }
         }
-        if (flag == -2) {
+        if (pin == -2) {
           octopusPositionY++;
           elem7.style.transform = "translateY(" + octopusPositionY + "px)";
           if (octopusPositionY == 0) {
-            flag = 1;
+            pin = 1;
           }
         }
       }
-      if (flag == -1) {
+      if (pin == -1) {
         octopusPositionY--;
         elem7.style.transform = "translateY(" + octopusPositionY + "px)";
         if (octopusPositionY == -100) {
-          flag = -2;
+          pin = -2;
         }
       }
     }
