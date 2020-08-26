@@ -39,7 +39,7 @@ ft=900;
        elem2.style.top = up + "px";
       
        elem1.style.backgroundPosition=pis + "px";   
-      elem2.style.transform="translate(1px) rotate(20deg)";
+     
      
       
     }
@@ -110,6 +110,46 @@ function octopus() {
         octopusPositionY--;
         elem6.style.transform = "translateY(" + octopusPositionY + "px)";
         if (octopusPositionY == -100) {
+          flag = -2;
+        }
+      }
+    }
+  }
+  function fishes() {
+    let octopusPositionY = 0;
+    let Rotate = 0;
+    let flag = 1;
+    let elem7 = document.getElementById("fish");
+    let fxnId = setInterval(fish, 30);
+    function fish() {
+      if (flag == 1) {
+        octopusPositionY++;
+        Rotate -= 0.4;
+        elem7.style.transform = "translateY(" + octopusPositionY + "px) rotate(" + Rotate + "deg)";
+        if (octopusPositionY == 50) {
+          flag = 2;
+        }
+      }
+      if (flag == 2 || flag == -2) {
+        if (flag == 2) {
+          octopusPositionY--;
+          elem7.style.transform = "translateY(" + octopusPositionY + "px)";
+          if (octopusPositionY == 0) {
+            flag = -1;
+          }
+        }
+        if (flag == -2) {
+          octopusPositionY++;
+          elem7.style.transform = "translateY(" + octopusPositionY + "px)";
+          if (octopusPositionY == 0) {
+            flag = 1;
+          }
+        }
+      }
+      if (flag == -1) {
+        octopusPositionY--;
+        elem7.style.transform = "translateY(" + octopusPositionY + "px)";
+        if (octopusPositionY == -50) {
           flag = -2;
         }
       }
