@@ -13,7 +13,7 @@ function myMove() {
   function frame() {
     if(pos==1300 )
     {
-pos=0;
+pos=-30;
 fs=1000;
 ft=900;
     }
@@ -49,8 +49,9 @@ function air() {
     function frame() {
         if(ps==1400)
         {
-            ps=0;
-            high=200;
+            
+           ps=0;
+            high=200; 
         }
         if(high==20)
         {
