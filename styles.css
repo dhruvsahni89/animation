@@ -21,9 +21,9 @@
   }
   #sky {
     width: 100%;
-    height: 280px;
+    height: 305px;
     position: relative;
-    background-image: url(images/land123.jpg);
+    background-image: url(images/land234.jpg);
     background-size: cover;
    /* background-repeat: repeat-x;*/
    }
@@ -36,10 +36,20 @@
      left: 1200px;
    }
    #fish2 {
-     width: 50px;
-     height: 50px;
+     width: 95px;
+     height: 80px;
      position: absolute;
-     background-image: url(images/fish51.png);
-     top: 450px;
+     background-image: url(images/octopus.png);
+     top: 410px;
      left: 1100px;
+   }
+   #balloon {
+       position: absolute;
+       width: 100px;
+       height: 100px;
+       background-image: url(images/balloon.png);
+       top:200px;
+       background-repeat: no-repeat;
+       
+
    }
