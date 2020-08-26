@@ -20,23 +20,19 @@ fs=1000;
 ft=900;
     }
 
-      if(up<340){
-        up=up+0.5;
-      
-
-      }
+     
    else {
      
     pos++;   
     pis--;
     fs--;
     ft--;
-    up=up-0.5;
+    
        
        elem.style.left = pos + "px"; 
        elem2.style.left = fs + "px";
        elem3.style.left = ft + "px"; 
-       elem2.style.top = up + "px";
+      
       
        elem1.style.backgroundPosition=pis + "px";   
      
@@ -80,7 +76,7 @@ function octopus() {
     let Rotate = 0;
     let flag = 1;
     let elem6 = document.getElementById("fish2");
-    let fxnId = setInterval(octo, 20);
+    let fxnId = setInterval(octo, 25);
     function octo() {
       if (flag == 1) {
         octopusPositionY++;
@@ -120,13 +116,13 @@ function octopus() {
     let Rotate = 0;
     let flag = 1;
     let elem7 = document.getElementById("fish");
-    let fxnId = setInterval(fish, 30);
+    let fxnId = setInterval(fish, 50);
     function fish() {
       if (flag == 1) {
         octopusPositionY++;
         Rotate -= 0.4;
         elem7.style.transform = "translateY(" + octopusPositionY + "px) rotate(" + Rotate + "deg)";
-        if (octopusPositionY == 50) {
+        if (octopusPositionY == 100) {
           flag = 2;
         }
       }
@@ -149,7 +145,7 @@ function octopus() {
       if (flag == -1) {
         octopusPositionY--;
         elem7.style.transform = "translateY(" + octopusPositionY + "px)";
-        if (octopusPositionY == -50) {
+        if (octopusPositionY == -100) {
           flag = -2;
         }
       }

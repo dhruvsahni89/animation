@@ -32,8 +32,8 @@
      height: 50px;
      position: absolute;
      background-image: url(images/fish1234.png);
-     top: 480px;
-     left: 1200px;
+     top: 400px;
+     left: 1280px;
    }
    #fish2 {
      width: 95px;
@@ -41,7 +41,7 @@
      position: absolute;
      background-image: url(images/octopus.png);
      top: 410px;
-     left: 1100px;
+     left: 1200px;
    }
    #balloon {
        position: absolute;
